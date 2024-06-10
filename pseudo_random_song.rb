@@ -1,20 +1,6 @@
 use_bpm 140
 
-class WeightedNotePool
-  
-  def initialize(weighted_notes)
-    @notes = []
-    weighted_notes.each{|wn|
-      for i in 0..wn[1]
-        @notes.push(wn[0])
-      end
-    }
-  end
-  
-  def get_note
-    return @notes.choose
-  end
-end
+run_file "/Users/admiralbolt/git/sonicpi/weighted_note_pool.rb"
 
 in_thread(name: :metronome) do
   loop do
